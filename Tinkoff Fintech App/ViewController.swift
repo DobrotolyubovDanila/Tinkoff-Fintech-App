@@ -9,12 +9,48 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let callBy = #function
+        printFuncVC(controller: "FirstVC", callByFunc: callBy)
     }
-
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        let callBy = #function
+        printFuncVC(controller: "FirstVC", callByFunc: callBy)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        let callBy = #function
+        printFuncVC(controller: "FirstVC", callByFunc: callBy)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        let callBy = #function
+        printFuncVC(controller: "FirstVC", callByFunc: callBy)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let callBy = #function
+        printFuncVC(controller: "FirstVC", callByFunc: callBy)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        let callBy = #function
+        printFuncVC(controller: "FirstVC", callByFunc: callBy)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        let callBy = #function
+        printFuncVC(controller: "FirstVC", callByFunc: callBy)
+    }
+    
 }
 
