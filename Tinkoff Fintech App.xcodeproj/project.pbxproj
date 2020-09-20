@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E0D8E246250E392600986BEC /* LogFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D8E245250E392600986BEC /* LogFunc.swift */; };
+		E0D8E246250E392600986BEC /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D8E245250E392600986BEC /* Logger.swift */; };
 		E0EBA6B6250A8E2D004CD943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EBA6B5250A8E2D004CD943 /* AppDelegate.swift */; };
 		E0EBA6BA250A8E2D004CD943 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EBA6B9250A8E2D004CD943 /* ProfileViewController.swift */; };
 		E0EBA6BD250A8E2D004CD943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0EBA6BB250A8E2D004CD943 /* Main.storyboard */; };
@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E0D8E245250E392600986BEC /* LogFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFunc.swift; sourceTree = "<group>"; };
+		E0D8E245250E392600986BEC /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		E0EBA6B2250A8E2D004CD943 /* Tinkoff Fintech App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinkoff Fintech App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EBA6B5250A8E2D004CD943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EBA6B9250A8E2D004CD943 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				E0EBA6B5250A8E2D004CD943 /* AppDelegate.swift */,
 				E0EBA6B9250A8E2D004CD943 /* ProfileViewController.swift */,
-				E0D8E245250E392600986BEC /* LogFunc.swift */,
+				E0D8E245250E392600986BEC /* Logger.swift */,
 				E0EBA6BB250A8E2D004CD943 /* Main.storyboard */,
 				E0EBA6BE250A8E30004CD943 /* Assets.xcassets */,
 				E0EBA6C0250A8E30004CD943 /* LaunchScreen.storyboard */,
@@ -139,7 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0EBA6BA250A8E2D004CD943 /* ProfileViewController.swift in Sources */,
-				E0D8E246250E392600986BEC /* LogFunc.swift in Sources */,
+				E0D8E246250E392600986BEC /* Logger.swift in Sources */,
 				E0EBA6B6250A8E2D004CD943 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
