@@ -7,21 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E060FADF250E875D00522FCC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E060FADE250E875D00522FCC /* SecondViewController.swift */; };
 		E0D8E246250E392600986BEC /* LogFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D8E245250E392600986BEC /* LogFunc.swift */; };
 		E0EBA6B6250A8E2D004CD943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EBA6B5250A8E2D004CD943 /* AppDelegate.swift */; };
-		E0EBA6BA250A8E2D004CD943 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EBA6B9250A8E2D004CD943 /* ViewController.swift */; };
+		E0EBA6BA250A8E2D004CD943 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EBA6B9250A8E2D004CD943 /* ProfileViewController.swift */; };
 		E0EBA6BD250A8E2D004CD943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0EBA6BB250A8E2D004CD943 /* Main.storyboard */; };
 		E0EBA6BF250A8E30004CD943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0EBA6BE250A8E30004CD943 /* Assets.xcassets */; };
 		E0EBA6C2250A8E30004CD943 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0EBA6C0250A8E30004CD943 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E060FADE250E875D00522FCC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E0D8E245250E392600986BEC /* LogFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFunc.swift; sourceTree = "<group>"; };
 		E0EBA6B2250A8E2D004CD943 /* Tinkoff Fintech App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinkoff Fintech App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EBA6B5250A8E2D004CD943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E0EBA6B9250A8E2D004CD943 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E0EBA6B9250A8E2D004CD943 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E0EBA6BC250A8E2D004CD943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0EBA6BE250A8E30004CD943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0EBA6C1250A8E30004CD943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,8 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				E0EBA6B5250A8E2D004CD943 /* AppDelegate.swift */,
-				E0EBA6B9250A8E2D004CD943 /* ViewController.swift */,
-				E060FADE250E875D00522FCC /* SecondViewController.swift */,
+				E0EBA6B9250A8E2D004CD943 /* ProfileViewController.swift */,
 				E0D8E245250E392600986BEC /* LogFunc.swift */,
 				E0EBA6BB250A8E2D004CD943 /* Main.storyboard */,
 				E0EBA6BE250A8E30004CD943 /* Assets.xcassets */,
@@ -97,7 +94,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Dobrotolyubov Danila";
 				TargetAttributes = {
 					E0EBA6B1250A8E2D004CD943 = {
@@ -141,8 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E060FADF250E875D00522FCC /* SecondViewController.swift in Sources */,
-				E0EBA6BA250A8E2D004CD943 /* ViewController.swift in Sources */,
+				E0EBA6BA250A8E2D004CD943 /* ProfileViewController.swift in Sources */,
 				E0D8E246250E392600986BEC /* LogFunc.swift in Sources */,
 				E0EBA6B6250A8E2D004CD943 /* AppDelegate.swift in Sources */,
 			);
@@ -196,6 +192,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -256,6 +253,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -296,7 +294,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-.Tinkoff-Fintech-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "-ru.Dobrotolyubov";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -315,7 +313,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-.Tinkoff-Fintech-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "-ru.Dobrotolyubov";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
