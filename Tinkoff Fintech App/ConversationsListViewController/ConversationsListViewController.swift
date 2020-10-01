@@ -10,6 +10,8 @@ import UIKit
 
 class ConversationsListViewController: UITableViewController {
     
+    var profileImage: UIImage?
+    
     var cellsOnline: [ConversationCellModel] = []
     var cellsOffline:[ConversationCellModel] = []
     
@@ -42,6 +44,8 @@ class ConversationsListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        profileAvatarView.setImage(image: profileImage)
+        
         conversationCells.sort { (item1, item2) -> Bool in
             item1.date > item2.date
         }
@@ -51,7 +55,8 @@ class ConversationsListViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-                profileAvatarView.setCornerRadius(cornerRadius: profileAvatarView.frame.height/2)
+        super.viewDidAppear(animated)
+        profileAvatarView.setCornerRadius(cornerRadius: profileAvatarView.frame.height/2)
     }
     
     // MARK: - Table view data source
@@ -143,9 +148,11 @@ class ConversationsListViewController: UITableViewController {
             if let image = profileAvatarView.profileImageView.image {
                 pvc.profileImage = image
             }
+            pvc.profileImageDelegate = self
         }
         self.present(nProfileController, animated: true, completion: nil)
     }
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -162,7 +169,7 @@ class ConversationsListViewController: UITableViewController {
         
         if let message = (tableView.cellForRow(at: indexPath) as! ChatDescriptionCell).messageLabel.text  {
             if message != "No messages yet"{
-            conversationViewController.testArray.append(MessageCellMode(text: message, isIncoming: true))
+                conversationViewController.testArray.append(MessageCellMode(text: message, isIncoming: true))
             }
         }
     }
@@ -184,4 +191,10 @@ class ConversationsListViewController: UITableViewController {
         }
     }
     
+}
+
+extension ConversationsListViewController: PassImageProtocol {
+    func setImage(image: UIImage?) {
+        profileAvatarView.setImage(image: image)
+    }
 }

@@ -21,4 +21,13 @@ class ProfileAvatarView: UIView {
         profileImageButton.layer.cornerRadius = cornerRadius
         self.layer.cornerRadius = cornerRadius
     }
+    
+    func setImage(image: UIImage?) {
+        guard let image = image else { return }
+        
+        profileImageView.image = image
+        profileImageView.contentMode = .scaleAspectFill
+        profileImageView.clipsToBounds = true
+        profileLabel.isHidden = true
+    }
 }

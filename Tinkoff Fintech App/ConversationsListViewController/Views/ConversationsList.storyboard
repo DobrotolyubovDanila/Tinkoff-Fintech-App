@@ -11,7 +11,7 @@
         <!--Tinkoff Chat-->
         <scene sceneID="ihW-d9-Geo">
             <objects>
-                <tableViewController id="bUn-5U-Hcz" customClass="ConversationsListViewController" customModule="Tinkoff_Fintech_App" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ConversationsList" id="bUn-5U-Hcz" customClass="ConversationsListViewController" customModule="Tinkoff_Fintech_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OVT-mG-LaU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,7 +140,7 @@ Second Line</string>
                     <navigationItem key="navigationItem" title="Tinkoff Chat" id="7jY-hK-ObL">
                         <barButtonItem key="rightBarButtonItem" id="6kM-Ro-Y2n">
                             <view key="customView" clipsSubviews="YES" contentMode="scaleAspectFill" id="08F-KO-fya" customClass="ProfileAvatarView" customModule="Tinkoff_Fintech_App" customModuleProvider="target">
-                                <rect key="frame" x="326" y="5.5" width="33" height="33"/>
+                                <rect key="frame" x="326" y="6" width="33" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="flT-6r-LRr">

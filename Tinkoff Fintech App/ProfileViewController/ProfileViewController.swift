@@ -16,10 +16,12 @@ class ProfileViewController: UIViewController {
     
     var profileImage:UIImage?
     
+    var profileImageDelegate: PassImageProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setImage(image: profileImage)
+        profileAvatarView.setImage(image: profileImage)
         
     }
     
@@ -59,7 +61,7 @@ class ProfileViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
-        
+        profileImageDelegate?.setImage(image: profileAvatarView.profileImageView.image)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -117,16 +119,13 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
                                didFinishPickingMediaWithInfo info:[UIImagePickerController.InfoKey: Any]){
         
         let image = info[.editedImage] as? UIImage
-        setImage(image: image)
+        profileAvatarView.setImage(image: image)
         
         dismiss(animated: true, completion: nil)
     }
     
-    func setImage(image: UIImage?) {
-        guard let image = image else { return }
-        profileAvatarView.profileImageView.image = image
-        profileAvatarView.profileImageView.contentMode = .scaleAspectFill
-        profileAvatarView.profileLabel.isHidden = true
-    }
-    
+}
+
+protocol PassImageProtocol {
+    func setImage(image: UIImage?) -> ()
 }
