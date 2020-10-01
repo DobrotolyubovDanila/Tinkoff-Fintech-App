@@ -10,17 +10,16 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var profileAvatarView: ProfileAvatarView!
+    
     @IBOutlet weak var editButton: UIButton!
     
-    @IBOutlet weak var profileImageButton: UIButton!
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var profileLabel: UILabel!
-    
+    var profileImage:UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        setImage(image: profileImage)
         
     }
     
@@ -50,11 +49,10 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        profileImageButton.layer.cornerRadius = profileImageButton.bounds.height/2
-        profileImageButton.clipsToBounds = true
+        profileAvatarView.setCornerRadius(cornerRadius: profileAvatarView.frame.height/2)
         
-        profileImageView.layer.cornerRadius = profileImageView.bounds.height/2
-        profileImageView.clipsToBounds = true
+        profileAvatarView.clipsToBounds = true
+        
         
         editButton.layer.cornerRadius = 10
     }
@@ -118,13 +116,17 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info:[UIImagePickerController.InfoKey: Any]){
         
-        
-        profileImageView.image = info[.editedImage] as? UIImage
-        profileImageView.contentMode = .scaleAspectFill
-        
-        profileLabel.isHidden = true
+        let image = info[.editedImage] as? UIImage
+        setImage(image: image)
         
         dismiss(animated: true, completion: nil)
+    }
+    
+    func setImage(image: UIImage?) {
+        guard let image = image else { return }
+        profileAvatarView.profileImageView.image = image
+        profileAvatarView.profileImageView.contentMode = .scaleAspectFill
+        profileAvatarView.profileLabel.isHidden = true
     }
     
 }
