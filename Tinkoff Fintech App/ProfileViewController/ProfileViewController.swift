@@ -17,18 +17,10 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileLabel: UILabel!
     
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        
-//        print(editButton.frame)
-//        Пункт 3.2 – свойство frame еще нельзя распечатать,
-//        так как САМА кнопка еще не проинициализирована
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(editButton.frame)
+        
         
     }
     
@@ -39,7 +31,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        print(editButton.frame)
+        
         /*
          Свойства frame отличаются из-за того, что в петвом случае
          наш основной view и его subViews были загружены,но не "обработаны" Auto Layout.
@@ -49,13 +41,6 @@ class ProfileViewController: UIViewController {
          текущем методе.
          */
         
-        profileImageButton.layer.cornerRadius = profileImageButton.bounds.height/2
-        profileImageButton.clipsToBounds = true
-        
-        profileImageView.layer.cornerRadius = profileImageView.bounds.height/2
-        profileImageView.clipsToBounds = true
-        
-        editButton.layer.cornerRadius = 10
     }
     
     override func viewWillLayoutSubviews() {
@@ -65,7 +50,13 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        profileImageButton.layer.cornerRadius = profileImageButton.bounds.height/2
+        profileImageButton.clipsToBounds = true
         
+        profileImageView.layer.cornerRadius = profileImageView.bounds.height/2
+        profileImageView.clipsToBounds = true
+        
+        editButton.layer.cornerRadius = 10
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -108,6 +99,9 @@ class ProfileViewController: UIViewController {
         
     }
     
+    
+
+    
 }
 
 extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
@@ -124,9 +118,6 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info:[UIImagePickerController.InfoKey: Any]){
         
-        if let image = info[.editedImage] as? UIImage {
-            print(image.description)
-        }
         
         profileImageView.image = info[.editedImage] as? UIImage
         profileImageView.contentMode = .scaleAspectFill
