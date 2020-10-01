@@ -18,34 +18,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danila Dobrorolyubov" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTC-MC-RMS">
-                                <rect key="frame" x="82" y="399.5" width="211" height="26.5"/>
+                                <rect key="frame" x="82" y="386" width="211" height="26.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26.5" id="DgB-kr-lI4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fV5-Du-2u8">
-                                <rect key="frame" x="70.5" y="456" width="238" height="41"/>
+                                <rect key="frame" x="70.5" y="432.5" width="238" height="41"/>
                                 <string key="text">MAI student, IOS Dev, begginer
 Moscow, Russia</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f6y-us-lRk">
-                                <rect key="frame" x="70.5" y="136" width="234" height="234"/>
-                                <color key="backgroundColor" red="0.89058679340000002" green="0.90760642290000004" blue="0.1654500663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="f6y-us-lRk" secondAttribute="height" multiplier="1:1" id="NNq-3z-bIH"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DD" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="60" translatesAutoresizingMaskIntoConstraints="NO" id="zKQ-GD-Orh">
-                                <rect key="frame" x="92.5" y="158" width="190" height="190"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="120"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aq8-em-boW">
-                                <rect key="frame" x="70.5" y="590" width="234" height="40"/>
+                                <rect key="frame" x="62.5" y="590" width="250" height="40"/>
                                 <color key="backgroundColor" red="0.96462148430000005" green="0.96475988629999998" blue="0.96459120509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="8r5-iE-VrN"/>
@@ -54,39 +44,68 @@ Moscow, Russia</string>
                                     <color key="titleColor" red="0.65849125389999996" green="0.66278618570000003" blue="0.66270011660000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwF-Df-qXq">
-                                <rect key="frame" x="70.5" y="136" width="234" height="234"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Pb-zP-anh" customClass="ProfileAvatarView" customModule="Tinkoff_Fintech_App" customModuleProvider="target">
+                                <rect key="frame" x="62.5" y="116" width="250" height="250"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f6y-us-lRk">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <color key="backgroundColor" red="0.89058679340000002" green="0.90760642290000004" blue="0.1654500663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DD" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="60" translatesAutoresizingMaskIntoConstraints="NO" id="zKQ-GD-Orh">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="120"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwF-Df-qXq">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <connections>
+                                            <action selector="imageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lj6-Rd-Pyi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="zKQ-GD-Orh" firstAttribute="leading" secondItem="5Pb-zP-anh" secondAttribute="leading" id="3c7-ui-I69"/>
+                                    <constraint firstAttribute="bottom" secondItem="TwF-Df-qXq" secondAttribute="bottom" id="Abx-Ie-8hv"/>
+                                    <constraint firstAttribute="width" secondItem="5Pb-zP-anh" secondAttribute="height" multiplier="1:1" id="YnR-yn-SJl"/>
+                                    <constraint firstAttribute="trailing" secondItem="TwF-Df-qXq" secondAttribute="trailing" id="eIS-Lw-CPX"/>
+                                    <constraint firstItem="TwF-Df-qXq" firstAttribute="top" secondItem="5Pb-zP-anh" secondAttribute="top" id="fOt-WV-dJH"/>
+                                    <constraint firstItem="zKQ-GD-Orh" firstAttribute="bottom" secondItem="TwF-Df-qXq" secondAttribute="bottom" id="ffK-AS-OSV"/>
+                                    <constraint firstItem="f6y-us-lRk" firstAttribute="bottom" secondItem="zKQ-GD-Orh" secondAttribute="bottom" id="isd-Rh-Lq8"/>
+                                    <constraint firstItem="f6y-us-lRk" firstAttribute="leading" secondItem="5Pb-zP-anh" secondAttribute="leading" id="me1-X2-D64"/>
+                                    <constraint firstItem="TwF-Df-qXq" firstAttribute="leading" secondItem="5Pb-zP-anh" secondAttribute="leading" id="nM5-PQ-ucW"/>
+                                    <constraint firstItem="f6y-us-lRk" firstAttribute="trailing" secondItem="TwF-Df-qXq" secondAttribute="trailing" id="rz4-aU-vHh"/>
+                                    <constraint firstItem="f6y-us-lRk" firstAttribute="top" secondItem="5Pb-zP-anh" secondAttribute="top" id="xTc-3l-iP4"/>
+                                    <constraint firstAttribute="trailing" secondItem="zKQ-GD-Orh" secondAttribute="trailing" id="zCO-yv-dSi"/>
+                                    <constraint firstItem="zKQ-GD-Orh" firstAttribute="top" secondItem="5Pb-zP-anh" secondAttribute="top" id="zUY-fj-F6Q"/>
+                                </constraints>
                                 <connections>
-                                    <action selector="imageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lj6-Rd-Pyi"/>
+                                    <outlet property="profileImageButton" destination="TwF-Df-qXq" id="ef9-gm-kbV"/>
+                                    <outlet property="profileImageView" destination="f6y-us-lRk" id="q37-Gq-x3T"/>
+                                    <outlet property="profileLabel" destination="zKQ-GD-Orh" id="wAy-NA-VBE"/>
                                 </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fV5-Du-2u8" firstAttribute="top" secondItem="fTC-MC-RMS" secondAttribute="bottom" constant="30" id="12h-pF-cPD"/>
+                            <constraint firstItem="fTC-MC-RMS" firstAttribute="top" secondItem="5Pb-zP-anh" secondAttribute="bottom" constant="20" id="0gA-gJ-oC7"/>
+                            <constraint firstItem="fV5-Du-2u8" firstAttribute="top" secondItem="fTC-MC-RMS" secondAttribute="bottom" constant="20" id="12h-pF-cPD"/>
                             <constraint firstItem="fTC-MC-RMS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6C8-w9-RxR"/>
-                            <constraint firstItem="TwF-Df-qXq" firstAttribute="leading" secondItem="f6y-us-lRk" secondAttribute="leading" id="6Z5-CP-tkS"/>
-                            <constraint firstItem="zKQ-GD-Orh" firstAttribute="top" secondItem="f6y-us-lRk" secondAttribute="top" constant="22" id="A87-n8-h1w"/>
-                            <constraint firstItem="zKQ-GD-Orh" firstAttribute="bottom" secondItem="f6y-us-lRk" secondAttribute="bottom" constant="-22" id="GWO-q8-b1H"/>
+                            <constraint firstItem="Aq8-em-boW" firstAttribute="centerX" secondItem="fTC-MC-RMS" secondAttribute="centerX" id="6hY-5a-sWA"/>
+                            <constraint firstItem="5Pb-zP-anh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7A1-bJ-gYi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Aq8-em-boW" secondAttribute="bottom" constant="37" id="IOT-FF-5p1"/>
-                            <constraint firstItem="zKQ-GD-Orh" firstAttribute="trailing" secondItem="f6y-us-lRk" secondAttribute="trailing" constant="-22" id="Lpj-Hr-UcZ"/>
-                            <constraint firstItem="Aq8-em-boW" firstAttribute="leading" secondItem="f6y-us-lRk" secondAttribute="leading" id="MYP-XE-orU"/>
-                            <constraint firstItem="TwF-Df-qXq" firstAttribute="trailing" secondItem="f6y-us-lRk" secondAttribute="trailing" id="R79-6l-m1k"/>
-                            <constraint firstItem="fTC-MC-RMS" firstAttribute="top" secondItem="f6y-us-lRk" secondAttribute="bottom" constant="29.5" id="SYT-1b-EKY"/>
+                            <constraint firstItem="Aq8-em-boW" firstAttribute="top" relation="lessThanOrEqual" secondItem="fV5-Du-2u8" secondAttribute="bottom" constant="118.5" id="K1z-1B-7uE"/>
+                            <constraint firstItem="5Pb-zP-anh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QTu-kj-UZV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fV5-Du-2u8" secondAttribute="trailing" constant="20" id="Z7k-XU-b9E"/>
-                            <constraint firstItem="Aq8-em-boW" firstAttribute="trailing" secondItem="f6y-us-lRk" secondAttribute="trailing" id="bPh-g7-6Dx"/>
-                            <constraint firstItem="TwF-Df-qXq" firstAttribute="bottom" secondItem="f6y-us-lRk" secondAttribute="bottom" id="e96-Zq-9tf"/>
-                            <constraint firstItem="f6y-us-lRk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="fWK-vx-hc4"/>
-                            <constraint firstItem="zKQ-GD-Orh" firstAttribute="leading" secondItem="f6y-us-lRk" secondAttribute="leading" constant="22" id="foN-2v-P5V"/>
-                            <constraint firstItem="TwF-Df-qXq" firstAttribute="top" secondItem="f6y-us-lRk" secondAttribute="top" id="icY-YT-xMR"/>
-                            <constraint firstItem="f6y-us-lRk" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.350825" id="puG-M9-Kv1"/>
-                            <constraint firstItem="fV5-Du-2u8" firstAttribute="leading" secondItem="f6y-us-lRk" secondAttribute="leading" id="tYj-de-ex9"/>
-                            <constraint firstItem="f6y-us-lRk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="z2D-Ss-9zF"/>
+                            <constraint firstItem="Aq8-em-boW" firstAttribute="width" secondItem="5Pb-zP-anh" secondAttribute="width" id="de6-Vt-ViE"/>
+                            <constraint firstItem="fV5-Du-2u8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70.5" id="rDr-UV-xra"/>
+                            <constraint firstItem="5Pb-zP-anh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.666667" id="yjV-5X-wG8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Profile" id="xdU-vv-b9e">
-                        <barButtonItem key="rightBarButtonItem" title="Close" id="Q9x-a9-h8c">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Q9x-a9-h8c">
                             <connections>
                                 <action selector="closeButtonTapped:" destination="BYZ-38-t0r" id="66I-se-LV4"/>
                                 <segue destination="SBj-gR-Znq" kind="unwind" unwindAction="unwindFromProfileVC:" id="hgd-Al-CcD"/>
@@ -95,9 +114,7 @@ Moscow, Russia</string>
                     </navigationItem>
                     <connections>
                         <outlet property="editButton" destination="Aq8-em-boW" id="D9T-Vw-7hH"/>
-                        <outlet property="profileImageButton" destination="TwF-Df-qXq" id="DEk-xW-5i9"/>
-                        <outlet property="profileImageView" destination="f6y-us-lRk" id="CqO-ne-Npt"/>
-                        <outlet property="profileLabel" destination="zKQ-GD-Orh" id="cyd-PO-k7f"/>
+                        <outlet property="profileAvatarView" destination="5Pb-zP-anh" id="db7-UA-Q9v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

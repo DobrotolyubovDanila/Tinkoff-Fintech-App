@@ -13,6 +13,8 @@ class ConversationsListViewController: UITableViewController {
     var cellsOnline: [ConversationCellModel] = []
     var cellsOffline:[ConversationCellModel] = []
     
+    @IBOutlet weak var profileAvatarView: ProfileAvatarView!
+    
     var conversationCells: [ConversationCellModel] = [
         ConversationCellModel(name: "Igor", message: "GO v fifu", date: Date(timeIntervalSinceNow: -900), isOnline: true, hasUnreadMessage: false),
         ConversationCellModel(name: "Арья Старк", message: "Я никто", date: Date(timeIntervalSinceNow: -90), isOnline: false, hasUnreadMessage: false),
@@ -46,9 +48,10 @@ class ConversationsListViewController: UITableViewController {
         
         cellsOnline = conversationCells.filter { $0.isOnline }
         cellsOffline = conversationCells.filter { !$0.isOnline }
-        
-//        profileButton.image = profileImage
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+                profileAvatarView.setCornerRadius(cornerRadius: profileAvatarView.frame.height/2)
     }
     
     // MARK: - Table view data source
@@ -133,10 +136,14 @@ class ConversationsListViewController: UITableViewController {
     }
     
     
-    @IBAction func profileButtonTapped(_ sender: UIBarButtonItem) {
+    @IBAction func profileButtonTapped(_ sender: UIButton) {
         let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
         let nProfileController: UINavigationController = profileStoryboard.instantiateViewController(withIdentifier: "profileNC") as! UINavigationController
-        
+        if let pvc = nProfileController.topViewController as? ProfileViewController {
+            if let image = profileAvatarView.profileImageView.image {
+                pvc.profileImage = image
+            }
+        }
         self.present(nProfileController, animated: true, completion: nil)
     }
     
@@ -161,7 +168,20 @@ class ConversationsListViewController: UITableViewController {
     }
     
     @IBAction func  unwindFromProfileVC(_ sender: UIStoryboardSegue){
-        // метод для передачи данных между vc в будущем.
+        
+        if let pvc = sender.source as? ProfileViewController {
+            
+            if let _ = sender.destination as? ConversationsListViewController {
+                
+                if let image = pvc.profileAvatarView.profileImageView.image {
+                    
+                    self.profileAvatarView.profileImageView.image = image
+                    self.profileAvatarView.profileImageView.clipsToBounds = true
+                    profileAvatarView.profileLabel.text = nil
+                    
+                }
+            }
+        }
     }
     
 }

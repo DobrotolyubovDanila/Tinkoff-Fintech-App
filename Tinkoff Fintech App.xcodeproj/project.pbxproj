@@ -20,6 +20,7 @@
 		E05BE3F32525759B00673380 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05BE3F22525759B00673380 /* Logger.swift */; };
 		E05BE3F9252575A200673380 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05BE3F6252575A200673380 /* Profile.storyboard */; };
 		E05BE3FA252575A200673380 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05BE3F8252575A200673380 /* ProfileViewController.swift */; };
+		E0CEE2F92526089C00696196 /* ProfileAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CEE2F82526089C00696196 /* ProfileAvatarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E05BE3F22525759B00673380 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		E05BE3F7252575A200673380 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		E05BE3F8252575A200673380 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E0CEE2F82526089C00696196 /* ProfileAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAvatarView.swift; sourceTree = "<group>"; };
 		E0EBA6B2250A8E2D004CD943 /* Tinkoff Fintech App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinkoff Fintech App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EBA6C3250A8E30004CD943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,8 +84,9 @@
 		E05BE3F5252575A200673380 /* ProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E05BE3F6252575A200673380 /* Profile.storyboard */,
 				E05BE3F8252575A200673380 /* ProfileViewController.swift */,
+				E0CEE2F82526089C00696196 /* ProfileAvatarView.swift */,
+				E05BE3F6252575A200673380 /* Profile.storyboard */,
 			);
 			path = ProfileViewController;
 			sourceTree = "<group>";
@@ -110,8 +113,8 @@
 				E05BE3CA252574FA00673380 /* AppDelegate.swift */,
 				E05BE3F22525759B00673380 /* Logger.swift */,
 				E05BE3D42525753D00673380 /* ConfigurableViewProtocol.swift */,
-				E05BE3CE2525751E00673380 /* Assets.xcassets */,
 				E05BE3D12525753400673380 /* LaunchScreen.storyboard */,
+				E05BE3CE2525751E00673380 /* Assets.xcassets */,
 				E05BE3D72525754600673380 /* ConversationsListViewController */,
 				E05BE3EA2525758700673380 /* ConversationViewController */,
 				E05BE3F5252575A200673380 /* ProfileViewController */,
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E05BE3DD2525754600673380 /* ChatDescriptionCell.swift in Sources */,
+				E0CEE2F92526089C00696196 /* ProfileAvatarView.swift in Sources */,
 				E05BE3CB252574FA00673380 /* AppDelegate.swift in Sources */,
 				E05BE3EF2525758700673380 /* ConversationViewController.swift in Sources */,
 				E05BE3D52525753D00673380 /* ConfigurableViewProtocol.swift in Sources */,
