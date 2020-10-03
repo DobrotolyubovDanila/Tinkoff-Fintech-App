@@ -89,7 +89,7 @@ class ConversationsListViewController: UITableViewController {
         
         
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatOnlineCell", for: indexPath) as! ChatDescriptionCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatOnlineCell", for: indexPath) as! ChatOnlineCell
             
             let isToday = calendar.isDateInToday(cellsOnline[indexPath.row].date)
             dateFormatter.dateFormat = isToday ? "HH:mm ›" : "dd.MMM ›"
@@ -107,15 +107,13 @@ class ConversationsListViewController: UITableViewController {
                 cell.messageLabel.font = UIFont(name: "HelveticaNeue", size: cell.messageLabel.font.pointSize)
             }
             
-            cell.backgroundColor = #colorLiteral(red: 0.8905867934, green: 0.9076064229, blue: 0.1654500663, alpha: 0.06264378834)
-            
-            
+            cell.configOnlineIndicator()
             
             return cell
         }
         
         if indexPath.section == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatOfflineCell", for: indexPath) as! ChatDescriptionCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatOfflineCell", for: indexPath) as! ChatOfflineCell
             
             let isToday = calendar.isDateInToday(cellsOffline[indexPath.row].date)
             dateFormatter.dateFormat = isToday ? "HH:mm ›" : "dd.MMM ›"
@@ -157,7 +155,7 @@ class ConversationsListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let title = (tableView.cellForRow(at: indexPath) as! ChatDescriptionCell).nameLabel.text
+        let title = (tableView.cellForRow(at: indexPath) as! ChatOnlineCell).nameLabel.text
         
         let storyboard = UIStoryboard(name: "ConversationStoryboard", bundle: nil)
         let navigationController = storyboard.instantiateViewController(withIdentifier: "conversationNC") as! UINavigationController
@@ -167,7 +165,7 @@ class ConversationsListViewController: UITableViewController {
         
         conversationViewController.title = title
         
-        if let message = (tableView.cellForRow(at: indexPath) as! ChatDescriptionCell).messageLabel.text  {
+        if let message = (tableView.cellForRow(at: indexPath) as! ChatOnlineCell).messageLabel.text  {
             if message != "No messages yet"{
                 conversationViewController.testArray.append(MessageCellMode(text: message, isIncoming: true))
             }

@@ -12,7 +12,7 @@
 		E05BE3D22525753400673380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05BE3D12525753400673380 /* LaunchScreen.storyboard */; };
 		E05BE3D52525753D00673380 /* ConfigurableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05BE3D42525753D00673380 /* ConfigurableViewProtocol.swift */; };
 		E05BE3DC2525754600673380 /* ConversationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05BE3D82525754600673380 /* ConversationsListViewController.swift */; };
-		E05BE3DD2525754600673380 /* ChatDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05BE3DA2525754600673380 /* ChatDescriptionCell.swift */; };
+		E05BE3DD2525754600673380 /* ChatOnlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05BE3DA2525754600673380 /* ChatOnlineCell.swift */; };
 		E05BE3DE2525754600673380 /* ConversationsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05BE3DB2525754600673380 /* ConversationsList.storyboard */; };
 		E05BE3EE2525758700673380 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05BE3EB2525758700673380 /* ConversationCell.swift */; };
 		E05BE3EF2525758700673380 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05BE3EC2525758700673380 /* ConversationViewController.swift */; };
@@ -20,6 +20,8 @@
 		E05BE3F32525759B00673380 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05BE3F22525759B00673380 /* Logger.swift */; };
 		E05BE3F9252575A200673380 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05BE3F6252575A200673380 /* Profile.storyboard */; };
 		E05BE3FA252575A200673380 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05BE3F8252575A200673380 /* ProfileViewController.swift */; };
+		E06B174A252908060084BA8D /* ChatOfflineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06B1749252908060084BA8D /* ChatOfflineCell.swift */; };
+		E06B174E252909030084BA8D /* ConversationCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06B174D252909030084BA8D /* ConversationCellModel.swift */; };
 		E0CEE2F92526089C00696196 /* ProfileAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CEE2F82526089C00696196 /* ProfileAvatarView.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +31,7 @@
 		E05BE3D12525753400673380 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E05BE3D42525753D00673380 /* ConfigurableViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableViewProtocol.swift; sourceTree = "<group>"; };
 		E05BE3D82525754600673380 /* ConversationsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsListViewController.swift; sourceTree = "<group>"; };
-		E05BE3DA2525754600673380 /* ChatDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDescriptionCell.swift; sourceTree = "<group>"; };
+		E05BE3DA2525754600673380 /* ChatOnlineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatOnlineCell.swift; sourceTree = "<group>"; };
 		E05BE3DB2525754600673380 /* ConversationsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConversationsList.storyboard; sourceTree = "<group>"; };
 		E05BE3EB2525758700673380 /* ConversationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		E05BE3EC2525758700673380 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +39,8 @@
 		E05BE3F22525759B00673380 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		E05BE3F7252575A200673380 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		E05BE3F8252575A200673380 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E06B1749252908060084BA8D /* ChatOfflineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOfflineCell.swift; sourceTree = "<group>"; };
+		E06B174D252909030084BA8D /* ConversationCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCellModel.swift; sourceTree = "<group>"; };
 		E0CEE2F82526089C00696196 /* ProfileAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAvatarView.swift; sourceTree = "<group>"; };
 		E0EBA6B2250A8E2D004CD943 /* Tinkoff Fintech App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinkoff Fintech App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EBA6C3250A8E30004CD943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,7 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				E05BE3D82525754600673380 /* ConversationsListViewController.swift */,
+				E05BE3DB2525754600673380 /* ConversationsList.storyboard */,
 				E05BE3D92525754600673380 /* Views */,
+				E06B174C252908EC0084BA8D /* Model */,
 			);
 			path = ConversationsListViewController;
 			sourceTree = "<group>";
@@ -65,8 +71,8 @@
 		E05BE3D92525754600673380 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E05BE3DA2525754600673380 /* ChatDescriptionCell.swift */,
-				E05BE3DB2525754600673380 /* ConversationsList.storyboard */,
+				E05BE3DA2525754600673380 /* ChatOnlineCell.swift */,
+				E06B1749252908060084BA8D /* ChatOfflineCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -75,8 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				E05BE3EB2525758700673380 /* ConversationCell.swift */,
-				E05BE3EC2525758700673380 /* ConversationViewController.swift */,
 				E05BE3ED2525758700673380 /* ConversationStoryboard.storyboard */,
+				E09884C82528D437007CFBA5 /* Views */,
 			);
 			path = ConversationViewController;
 			sourceTree = "<group>";
@@ -85,10 +91,34 @@
 			isa = PBXGroup;
 			children = (
 				E05BE3F8252575A200673380 /* ProfileViewController.swift */,
-				E0CEE2F82526089C00696196 /* ProfileAvatarView.swift */,
 				E05BE3F6252575A200673380 /* Profile.storyboard */,
+				E09884CA2528D443007CFBA5 /* Views */,
 			);
 			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		E06B174C252908EC0084BA8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E06B174D252909030084BA8D /* ConversationCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E09884C82528D437007CFBA5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E05BE3EC2525758700673380 /* ConversationViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E09884CA2528D443007CFBA5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0CEE2F82526089C00696196 /* ProfileAvatarView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E0EBA6A9250A8E2D004CD943 = {
@@ -196,7 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E05BE3DD2525754600673380 /* ChatDescriptionCell.swift in Sources */,
+				E05BE3DD2525754600673380 /* ChatOnlineCell.swift in Sources */,
 				E0CEE2F92526089C00696196 /* ProfileAvatarView.swift in Sources */,
 				E05BE3CB252574FA00673380 /* AppDelegate.swift in Sources */,
 				E05BE3EF2525758700673380 /* ConversationViewController.swift in Sources */,
@@ -205,6 +235,8 @@
 				E05BE3DC2525754600673380 /* ConversationsListViewController.swift in Sources */,
 				E05BE3FA252575A200673380 /* ProfileViewController.swift in Sources */,
 				E05BE3EE2525758700673380 /* ConversationCell.swift in Sources */,
+				E06B174A252908060084BA8D /* ChatOfflineCell.swift in Sources */,
+				E06B174E252909030084BA8D /* ConversationCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

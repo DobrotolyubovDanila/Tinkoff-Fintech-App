@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatOnlineCell" rowHeight="90" id="twK-9o-Xj9" customClass="ChatDescriptionCell" customModule="Tinkoff_Fintech_App" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatOnlineCell" rowHeight="90" id="twK-9o-Xj9" customClass="ChatOnlineCell" customModule="Tinkoff_Fintech_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="twK-9o-Xj9" id="p0y-bE-4Do">
@@ -52,14 +52,24 @@ Second Line</string>
                                             <color key="textColor" systemColor="systemGray2Color"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdL-QI-Upr">
+                                            <rect key="frame" x="52" y="20" width="19" height="19"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="pdL-QI-Upr" secondAttribute="height" multiplier="1:1" id="G4Q-fx-mzw"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="pdL-QI-Upr" firstAttribute="trailing" secondItem="t9t-MS-qBR" secondAttribute="trailing" id="1YJ-a4-Bd1"/>
                                         <constraint firstItem="t9t-MS-qBR" firstAttribute="leading" secondItem="p0y-bE-4Do" secondAttribute="leading" constant="21" id="70M-YO-qjd"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UKA-Ht-Luy" secondAttribute="bottom" constant="9" id="DEd-2B-qAK"/>
                                         <constraint firstItem="jMp-Lg-qQe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lnY-qZ-MdJ" secondAttribute="trailing" constant="15" id="F0s-vT-2PU"/>
                                         <constraint firstItem="UKA-Ht-Luy" firstAttribute="leading" secondItem="t9t-MS-qBR" secondAttribute="trailing" constant="8" symbolic="YES" id="HPt-cI-fdz"/>
                                         <constraint firstItem="jMp-Lg-qQe" firstAttribute="top" secondItem="p0y-bE-4Do" secondAttribute="top" constant="11" id="JWZ-7e-7dX"/>
                                         <constraint firstItem="UKA-Ht-Luy" firstAttribute="top" secondItem="lnY-qZ-MdJ" secondAttribute="bottom" constant="8" symbolic="YES" id="TU7-Id-ZSx"/>
+                                        <constraint firstItem="pdL-QI-Upr" firstAttribute="width" secondItem="t9t-MS-qBR" secondAttribute="width" multiplier="0.38" id="a0U-aG-XoM"/>
+                                        <constraint firstItem="pdL-QI-Upr" firstAttribute="top" secondItem="t9t-MS-qBR" secondAttribute="top" id="iIz-0l-TTa"/>
                                         <constraint firstItem="lnY-qZ-MdJ" firstAttribute="top" secondItem="p0y-bE-4Do" secondAttribute="top" constant="11" id="icG-4e-1u1"/>
                                         <constraint firstAttribute="trailing" secondItem="jMp-Lg-qQe" secondAttribute="trailing" constant="20" id="mWx-ui-84D"/>
                                         <constraint firstItem="t9t-MS-qBR" firstAttribute="centerY" secondItem="p0y-bE-4Do" secondAttribute="centerY" id="u5T-Lv-CDa"/>
@@ -72,9 +82,10 @@ Second Line</string>
                                     <outlet property="dateLabel" destination="jMp-Lg-qQe" id="cTT-N3-RjN"/>
                                     <outlet property="messageLabel" destination="UKA-Ht-Luy" id="muf-17-uME"/>
                                     <outlet property="nameLabel" destination="lnY-qZ-MdJ" id="oAi-9P-eqE"/>
+                                    <outlet property="onlineIndicator" destination="pdL-QI-Upr" id="r0g-CL-EBi"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatOfflineCell" rowHeight="90" id="bgd-C3-4pC" customClass="ChatDescriptionCell" customModule="Tinkoff_Fintech_App" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatOfflineCell" rowHeight="90" id="bgd-C3-4pC" customClass="ChatOfflineCell" customModule="Tinkoff_Fintech_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="118" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bgd-C3-4pC" id="au0-73-ZJq">
@@ -125,10 +136,10 @@ Second Line</string>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="avatarImageView" destination="lZk-ko-KBF" id="FaI-Q6-CIs"/>
-                                    <outlet property="dateLabel" destination="aPT-cs-Qqk" id="sVt-ZG-jtH"/>
-                                    <outlet property="messageLabel" destination="IRm-Tn-KiO" id="Agk-SC-UqJ"/>
-                                    <outlet property="nameLabel" destination="KKz-F3-KWA" id="KTQ-Z8-k3D"/>
+                                    <outlet property="avatarImageView" destination="lZk-ko-KBF" id="T24-ud-33r"/>
+                                    <outlet property="dateLabel" destination="aPT-cs-Qqk" id="uib-ea-vDP"/>
+                                    <outlet property="messageLabel" destination="IRm-Tn-KiO" id="vrT-2S-jUj"/>
+                                    <outlet property="nameLabel" destination="KKz-F3-KWA" id="n2R-Y9-5Ds"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -140,7 +151,7 @@ Second Line</string>
                     <navigationItem key="navigationItem" title="Tinkoff Chat" id="7jY-hK-ObL">
                         <barButtonItem key="rightBarButtonItem" id="6kM-Ro-Y2n">
                             <view key="customView" clipsSubviews="YES" contentMode="scaleAspectFill" id="08F-KO-fya" customClass="ProfileAvatarView" customModule="Tinkoff_Fintech_App" customModuleProvider="target">
-                                <rect key="frame" x="326" y="6" width="33" height="33"/>
+                                <rect key="frame" x="326" y="5.5" width="33" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="flT-6r-LRr">
