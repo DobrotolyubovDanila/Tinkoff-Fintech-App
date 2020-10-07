@@ -14,6 +14,10 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var editButton: UIButton!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var informationLabel: UILabel!
+    
     var profileImage:UIImage?
     
     var profileImageDelegate: PassImageProtocol?
@@ -23,6 +27,7 @@ class ProfileViewController: UIViewController {
         
         profileAvatarView.setImage(image: profileImage)
         
+        setInterfaceStyle()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +41,7 @@ class ProfileViewController: UIViewController {
         /*
          Свойства frame отличаются из-за того, что в петвом случае
          наш основной view и его subViews были загружены,но не "обработаны" Auto Layout.
-             
+         
          Во втором случае механизм уже отработал. Frame стал соотсетствовать констрейнтам.
          Поэтому округление провожу в
          текущем методе.
@@ -70,7 +75,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func imageButtonPressed(_ sender: UIButton) {
-
+        
         let cameraIcon = #imageLiteral(resourceName: "camera")
         let photoLiteral = #imageLiteral(resourceName: "photo")
         
@@ -91,17 +96,37 @@ class ProfileViewController: UIViewController {
         
         let cansel = UIAlertAction(title: "Cancel", style: .cancel)
         
+        
+        
         actionSheet.addAction(camera)
         actionSheet.addAction(photo)
         actionSheet.addAction(cansel)
+        
+        if ThemeManager.shared.current.style == .nigth {
+            if #available(iOS 13.0, *) {
+                actionSheet.overrideUserInterfaceStyle = .dark
+            }
+        }
         
         present(actionSheet, animated:true)
         
     }
     
     
-
-    
+    func setInterfaceStyle() {
+        editButton.backgroundColor = ThemeManager.shared.current.secondBackgroundColor
+        editButton.setTitleColor(ThemeManager.shared.current.tintColor, for: .normal)
+        nameLabel.textColor = ThemeManager.shared.current.mainTextColor
+        informationLabel.textColor = ThemeManager.shared.current.mainTextColor
+        
+        view.backgroundColor = ThemeManager.shared.current.backgroundColor
+        
+        navigationController?.navigationBar.tintColor = ThemeManager.shared.current.tintColor
+        navigationController?.navigationBar.barTintColor = ThemeManager.shared.current.backgroundColor
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: ThemeManager.shared.current.mainTextColor]
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: ThemeManager.shared.current.mainTextColor]
+    }
 }
 
 extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{

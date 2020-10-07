@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E01C3230252E6C4800AE9F57 /* ConversationListPassImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01C322F252E6C4800AE9F57 /* ConversationListPassImage.swift */; };
+		E01C3236252E6F0B00AE9F57 /* ConversationListThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01C3235252E6F0B00AE9F57 /* ConversationListThemePicker.swift */; };
+		E025DE94252DF80C008D957F /* DefaultThemeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E025DE93252DF80C008D957F /* DefaultThemeRepository.swift */; };
+		E025DE97252DF831008D957F /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E025DE96252DF831008D957F /* ThemeProtocol.swift */; };
+		E025DE9A252DF8B4008D957F /* ClassicTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E025DE99252DF8B4008D957F /* ClassicTheme.swift */; };
+		E025DE9D252DF9E8008D957F /* NightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E025DE9C252DF9E8008D957F /* NightTheme.swift */; };
 		E05BE3CB252574FA00673380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05BE3CA252574FA00673380 /* AppDelegate.swift */; };
 		E05BE3CF2525751E00673380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E05BE3CE2525751E00673380 /* Assets.xcassets */; };
 		E05BE3D22525753400673380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05BE3D12525753400673380 /* LaunchScreen.storyboard */; };
@@ -22,10 +28,22 @@
 		E05BE3FA252575A200673380 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05BE3F8252575A200673380 /* ProfileViewController.swift */; };
 		E06B174A252908060084BA8D /* ChatOfflineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06B1749252908060084BA8D /* ChatOfflineCell.swift */; };
 		E06B174E252909030084BA8D /* ConversationCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06B174D252909030084BA8D /* ConversationCellModel.swift */; };
+		E0804CE8252D360D003772B9 /* InterfaceStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0804CE7252D360D003772B9 /* InterfaceStyle.swift */; };
+		E09F8FD3252E313B00C7D270 /* ThemesPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F8FD2252E313B00C7D270 /* ThemesPickerDelegate.swift */; };
+		E0CE3FB8252B665D009CCE10 /* ThemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CE3FB7252B665D009CCE10 /* ThemesViewController.swift */; };
+		E0CE3FBE252B6682009CCE10 /* ThemesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0CE3FBD252B6682009CCE10 /* ThemesViewController.storyboard */; };
 		E0CEE2F92526089C00696196 /* ProfileAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CEE2F82526089C00696196 /* ProfileAvatarView.swift */; };
+		E0FE22ED252E1930009D44BB /* DayTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE22EC252E1930009D44BB /* DayTheme.swift */; };
+		E0FE22F1252E1D44009D44BB /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE22F0252E1D44009D44BB /* ThemeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E01C322F252E6C4800AE9F57 /* ConversationListPassImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationListPassImage.swift; sourceTree = "<group>"; };
+		E01C3235252E6F0B00AE9F57 /* ConversationListThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationListThemePicker.swift; sourceTree = "<group>"; };
+		E025DE93252DF80C008D957F /* DefaultThemeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultThemeRepository.swift; sourceTree = "<group>"; };
+		E025DE96252DF831008D957F /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
+		E025DE99252DF8B4008D957F /* ClassicTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicTheme.swift; sourceTree = "<group>"; };
+		E025DE9C252DF9E8008D957F /* NightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightTheme.swift; sourceTree = "<group>"; };
 		E05BE3CA252574FA00673380 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E05BE3CE2525751E00673380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E05BE3D12525753400673380 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,9 +59,15 @@
 		E05BE3F8252575A200673380 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E06B1749252908060084BA8D /* ChatOfflineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOfflineCell.swift; sourceTree = "<group>"; };
 		E06B174D252909030084BA8D /* ConversationCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCellModel.swift; sourceTree = "<group>"; };
+		E0804CE7252D360D003772B9 /* InterfaceStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceStyle.swift; sourceTree = "<group>"; };
+		E09F8FD2252E313B00C7D270 /* ThemesPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesPickerDelegate.swift; sourceTree = "<group>"; };
+		E0CE3FB7252B665D009CCE10 /* ThemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesViewController.swift; sourceTree = "<group>"; };
+		E0CE3FBD252B6682009CCE10 /* ThemesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThemesViewController.storyboard; sourceTree = "<group>"; };
 		E0CEE2F82526089C00696196 /* ProfileAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAvatarView.swift; sourceTree = "<group>"; };
 		E0EBA6B2250A8E2D004CD943 /* Tinkoff Fintech App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinkoff Fintech App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EBA6C3250A8E30004CD943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0FE22EC252E1930009D44BB /* DayTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTheme.swift; sourceTree = "<group>"; };
+		E0FE22F0252E1D44009D44BB /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +81,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E01C3233252E6EE800AE9F57 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E01C322F252E6C4800AE9F57 /* ConversationListPassImage.swift */,
+				E01C3235252E6F0B00AE9F57 /* ConversationListThemePicker.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E025DE92252DF7F3008D957F /* Theme Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				E0FE22F0252E1D44009D44BB /* ThemeManager.swift */,
+				E09F8FD2252E313B00C7D270 /* ThemesPickerDelegate.swift */,
+				E025DE93252DF80C008D957F /* DefaultThemeRepository.swift */,
+				E0804CE7252D360D003772B9 /* InterfaceStyle.swift */,
+				E025DE96252DF831008D957F /* ThemeProtocol.swift */,
+				E0E82A36252E1E9100A89F7D /* ThemeClasses */,
+			);
+			path = "Theme Configuration";
+			sourceTree = "<group>";
+		};
+		E025DE9F252E08FB008D957F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E025DE92252DF7F3008D957F /* Theme Configuration */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E05BE3D72525754600673380 /* ConversationsListViewController */ = {
 			isa = PBXGroup;
 			children = (
 				E05BE3D82525754600673380 /* ConversationsListViewController.swift */,
+				E01C3233252E6EE800AE9F57 /* Extensions */,
 				E05BE3DB2525754600673380 /* ConversationsList.storyboard */,
 				E05BE3D92525754600673380 /* Views */,
 				E06B174C252908EC0084BA8D /* Model */,
@@ -80,7 +135,7 @@
 		E05BE3EA2525758700673380 /* ConversationViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E05BE3EB2525758700673380 /* ConversationCell.swift */,
+				E05BE3EC2525758700673380 /* ConversationViewController.swift */,
 				E05BE3ED2525758700673380 /* ConversationStoryboard.storyboard */,
 				E09884C82528D437007CFBA5 /* Views */,
 			);
@@ -108,7 +163,7 @@
 		E09884C82528D437007CFBA5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E05BE3EC2525758700673380 /* ConversationViewController.swift */,
+				E05BE3EB2525758700673380 /* ConversationCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,6 +174,25 @@
 				E0CEE2F82526089C00696196 /* ProfileAvatarView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E0CE3FBB252B6665009CCE10 /* ThemesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E0CE3FB7252B665D009CCE10 /* ThemesViewController.swift */,
+				E0CE3FBD252B6682009CCE10 /* ThemesViewController.storyboard */,
+			);
+			path = ThemesViewController;
+			sourceTree = "<group>";
+		};
+		E0E82A36252E1E9100A89F7D /* ThemeClasses */ = {
+			isa = PBXGroup;
+			children = (
+				E025DE99252DF8B4008D957F /* ClassicTheme.swift */,
+				E0FE22EC252E1930009D44BB /* DayTheme.swift */,
+				E025DE9C252DF9E8008D957F /* NightTheme.swift */,
+			);
+			path = ThemeClasses;
 			sourceTree = "<group>";
 		};
 		E0EBA6A9250A8E2D004CD943 = {
@@ -144,11 +218,13 @@
 				E05BE3F22525759B00673380 /* Logger.swift */,
 				E05BE3D42525753D00673380 /* ConfigurableViewProtocol.swift */,
 				E05BE3D12525753400673380 /* LaunchScreen.storyboard */,
+				E0EBA6C3250A8E30004CD943 /* Info.plist */,
 				E05BE3CE2525751E00673380 /* Assets.xcassets */,
+				E025DE9F252E08FB008D957F /* Resources */,
 				E05BE3D72525754600673380 /* ConversationsListViewController */,
 				E05BE3EA2525758700673380 /* ConversationViewController */,
+				E0CE3FBB252B6665009CCE10 /* ThemesViewController */,
 				E05BE3F5252575A200673380 /* ProfileViewController */,
-				E0EBA6C3250A8E30004CD943 /* Info.plist */,
 			);
 			path = "Tinkoff Fintech App";
 			sourceTree = "<group>";
@@ -212,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E05BE3F02525758700673380 /* ConversationStoryboard.storyboard in Resources */,
+				E0CE3FBE252B6682009CCE10 /* ThemesViewController.storyboard in Resources */,
 				E05BE3CF2525751E00673380 /* Assets.xcassets in Resources */,
 				E05BE3F9252575A200673380 /* Profile.storyboard in Resources */,
 				E05BE3D22525753400673380 /* LaunchScreen.storyboard in Resources */,
@@ -226,17 +303,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E01C3236252E6F0B00AE9F57 /* ConversationListThemePicker.swift in Sources */,
+				E025DE97252DF831008D957F /* ThemeProtocol.swift in Sources */,
 				E05BE3DD2525754600673380 /* ChatOnlineCell.swift in Sources */,
+				E025DE9A252DF8B4008D957F /* ClassicTheme.swift in Sources */,
+				E025DE9D252DF9E8008D957F /* NightTheme.swift in Sources */,
+				E0FE22ED252E1930009D44BB /* DayTheme.swift in Sources */,
 				E0CEE2F92526089C00696196 /* ProfileAvatarView.swift in Sources */,
+				E09F8FD3252E313B00C7D270 /* ThemesPickerDelegate.swift in Sources */,
 				E05BE3CB252574FA00673380 /* AppDelegate.swift in Sources */,
 				E05BE3EF2525758700673380 /* ConversationViewController.swift in Sources */,
 				E05BE3D52525753D00673380 /* ConfigurableViewProtocol.swift in Sources */,
 				E05BE3F32525759B00673380 /* Logger.swift in Sources */,
 				E05BE3DC2525754600673380 /* ConversationsListViewController.swift in Sources */,
 				E05BE3FA252575A200673380 /* ProfileViewController.swift in Sources */,
+				E01C3230252E6C4800AE9F57 /* ConversationListPassImage.swift in Sources */,
 				E05BE3EE2525758700673380 /* ConversationCell.swift in Sources */,
 				E06B174A252908060084BA8D /* ChatOfflineCell.swift in Sources */,
+				E0CE3FB8252B665D009CCE10 /* ThemesViewController.swift in Sources */,
+				E0FE22F1252E1D44009D44BB /* ThemeManager.swift in Sources */,
 				E06B174E252909030084BA8D /* ConversationCellModel.swift in Sources */,
+				E0804CE8252D360D003772B9 /* InterfaceStyle.swift in Sources */,
+				E025DE94252DF80C008D957F /* DefaultThemeRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

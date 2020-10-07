@@ -29,5 +29,6 @@ class ProfileAvatarView: UIView {
         profileImageView.contentMode = .scaleAspectFill
         profileImageView.clipsToBounds = true
         profileLabel.isHidden = true
+        profileLabel.text = nil
     }
 }

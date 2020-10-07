@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatOnlineCell" rowHeight="90" id="twK-9o-Xj9" customClass="ChatOnlineCell" customModule="Tinkoff_Fintech_App" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ChatOnlineCell" rowHeight="90" id="twK-9o-Xj9" customClass="ChatOnlineCell" customModule="Tinkoff_Fintech_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="twK-9o-Xj9" id="p0y-bE-4Do">
@@ -149,14 +149,20 @@ Second Line</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tinkoff Chat" id="7jY-hK-ObL">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="Settings_groupsettings" id="lee-ZD-cff">
+                            <color key="tintColor" red="0.54889911410000003" green="0.5493570566" blue="0.56078028680000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="settingsButtonPressed:" destination="bUn-5U-Hcz" id="tYZ-9d-MHC"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" id="6kM-Ro-Y2n">
                             <view key="customView" clipsSubviews="YES" contentMode="scaleAspectFill" id="08F-KO-fya" customClass="ProfileAvatarView" customModule="Tinkoff_Fintech_App" customModuleProvider="target">
-                                <rect key="frame" x="326" y="5.5" width="33" height="33"/>
+                                <rect key="frame" x="326" y="6" width="33" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="flT-6r-LRr">
                                         <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
-                                        <color key="backgroundColor" red="0.89058679340000002" green="0.90760642290000004" blue="0.1654500663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.89451497790000001" green="0.91149806980000003" blue="0.16960212590000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="ASi-ew-Ip2"/>
                                             <constraint firstAttribute="width" constant="33" id="ecU-nU-wuu"/>
@@ -226,6 +232,7 @@ Second Line</string>
         </scene>
     </scenes>
     <resources>
+        <image name="Settings_groupsettings" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

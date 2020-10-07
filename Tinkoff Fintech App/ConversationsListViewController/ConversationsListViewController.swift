@@ -12,12 +12,9 @@ class ConversationsListViewController: UITableViewController {
     
     var profileImage: UIImage?
     
-    var cellsOnline: [ConversationCellModel] = []
-    var cellsOffline:[ConversationCellModel] = []
-    
     @IBOutlet weak var profileAvatarView: ProfileAvatarView!
     
-    var conversationCells: [ConversationCellModel] = [
+    var conversationCellsContent: [ConversationCellModel] = [
         ConversationCellModel(name: "Igor", message: "GO v fifu", date: Date(timeIntervalSinceNow: -900), isOnline: true, hasUnreadMessage: false),
         ConversationCellModel(name: "Арья Старк", message: "Я никто", date: Date(timeIntervalSinceNow: -90), isOnline: false, hasUnreadMessage: false),
         ConversationCellModel(name: "Джон сноу", message: "Зима близко", date: Date(timeIntervalSinceNow: 0), isOnline: true, hasUnreadMessage: true),
@@ -41,17 +38,19 @@ class ConversationsListViewController: UITableViewController {
     ]
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         profileAvatarView.setImage(image: profileImage)
         
-        conversationCells.sort { (item1, item2) -> Bool in
-            item1.date > item2.date
+        conversationCellsContent.sort { (item1, item2) -> Bool in
+            return item1.date > item2.date
         }
         
-        cellsOnline = conversationCells.filter { $0.isOnline }
-        cellsOffline = conversationCells.filter { !$0.isOnline }
+        conversationCellsContent = conversationCellsContent.filter { $0.isOnline } + conversationCellsContent.filter { !$0.isOnline }
+        
+        updateInterfaceWithoutReloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -60,82 +59,67 @@ class ConversationsListViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return cellsOnline.count
-        }
-        if section == 1 {
-            return cellsOffline.count
-        }
-        return 0
+        return conversationCellsContent.count
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 { return "Online" }
-        if section == 1 { return "History" }
-        return nil
-    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let dateFormatter = DateFormatter()
-        let calendar = Calendar.current
-        
-        
-        if indexPath.section == 0 {
+        if conversationCellsContent[indexPath.row].isOnline {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatOnlineCell", for: indexPath) as! ChatOnlineCell
             
-            let isToday = calendar.isDateInToday(cellsOnline[indexPath.row].date)
-            dateFormatter.dateFormat = isToday ? "HH:mm ›" : "dd.MMM ›"
-            
-            let dateString = dateFormatter.string(from: cellsOnline[indexPath.row].date)
-            
-            cell.nameLabel.text = cellsOnline[indexPath.row].name
-            cell.messageLabel.text = cellsOnline[indexPath.row].message ?? "No messages yet"
-            cell.dateLabel.text = dateString
-            cell.avatarImageView.layer.cornerRadius = cell.avatarImageView.frame.height/2
-            
-            if cellsOnline[indexPath.row].hasUnreadMessage {
-                cell.messageLabel.font = UIFont(name: "HelveticaNeue-Medium", size: cell.messageLabel.font.pointSize)
-            } else {
-                cell.messageLabel.font = UIFont(name: "HelveticaNeue", size: cell.messageLabel.font.pointSize)
-            }
-            
+            cell.configCellContent(conversationCellsContent[indexPath.row])
             cell.configOnlineIndicator()
+            cell.configWithTheme()
             
             return cell
         }
         
-        if indexPath.section == 1 {
+        if !conversationCellsContent[indexPath.row].isOnline {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatOfflineCell", for: indexPath) as! ChatOfflineCell
             
-            let isToday = calendar.isDateInToday(cellsOffline[indexPath.row].date)
-            dateFormatter.dateFormat = isToday ? "HH:mm ›" : "dd.MMM ›"
-            
-            let dateString = dateFormatter.string(from: cellsOffline[indexPath.row].date)
-            
-            
-            cell.nameLabel.text = cellsOffline[indexPath.row].name
-            cell.messageLabel.text = cellsOffline[indexPath.row].message ?? "No messages yet"
-            cell.dateLabel.text = dateString
-            cell.avatarImageView.layer.cornerRadius = cell.avatarImageView.frame.height/2
-            
-            if cellsOffline[indexPath.row].hasUnreadMessage {
-                cell.messageLabel.font = UIFont(name: "HelveticaNeue-Medium", size: cell.messageLabel.font.pointSize)
-            } else {
-                cell.messageLabel.font = UIFont(name: "HelveticaNeue", size: cell.messageLabel.font.pointSize)
-            }
+            cell.configCellContent(conversationCellsContent[indexPath.row])
+            cell.configColorTheme()
             
             return cell
         }
         
         return UITableViewCell()
+    }
+    
+    
+    // MARK: - Navigation
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        var title = (tableView.cellForRow(at: indexPath) as? ChatOnlineCell)?.nameLabel.text
+        
+        if title == nil {
+            title = (tableView.cellForRow(at: indexPath) as? ChatOfflineCell)?.nameLabel.text
+        }
+        
+        let storyboard = UIStoryboard(name: "ConversationStoryboard", bundle: nil)
+        let navigationController = storyboard.instantiateViewController(withIdentifier: "conversationNC") as! UINavigationController
+        let conversationViewController = navigationController.topViewController as! ConversationViewController
+        
+        self.navigationController?.pushViewController(conversationViewController, animated: true)
+        
+        conversationViewController.title = title
+        
+        if let message = (tableView.cellForRow(at: indexPath) as? ChatOnlineCell)?.messageLabel.text,
+           message != "No messages yet" {
+            conversationViewController.testArray.append(MessageCellMode(text: message, isIncoming: true))
+        }
+        
+        if let message = (tableView.cellForRow(at: indexPath) as? ChatOfflineCell)?.messageLabel.text,
+           message != "No messages yet" {
+            conversationViewController.testArray.append(MessageCellMode(text: message, isIncoming: true))
+        }
     }
     
     
@@ -152,47 +136,40 @@ class ConversationsListViewController: UITableViewController {
     }
     
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        let title = (tableView.cellForRow(at: indexPath) as! ChatOnlineCell).nameLabel.text
-        
-        let storyboard = UIStoryboard(name: "ConversationStoryboard", bundle: nil)
-        let navigationController = storyboard.instantiateViewController(withIdentifier: "conversationNC") as! UINavigationController
-        let conversationViewController = navigationController.topViewController as! ConversationViewController
-        
-        self.navigationController?.pushViewController(conversationViewController, animated: true)
-        
-        conversationViewController.title = title
-        
-        if let message = (tableView.cellForRow(at: indexPath) as! ChatOnlineCell).messageLabel.text  {
-            if message != "No messages yet"{
-                conversationViewController.testArray.append(MessageCellMode(text: message, isIncoming: true))
-            }
-        }
-    }
-    
     @IBAction func  unwindFromProfileVC(_ sender: UIStoryboardSegue){
         
-        if let pvc = sender.source as? ProfileViewController {
+        if let pvc = sender.source as? ProfileViewController, let _ = sender.destination as? ConversationsListViewController {
             
-            if let _ = sender.destination as? ConversationsListViewController {
+            if let image = pvc.profileAvatarView.profileImageView.image {
                 
-                if let image = pvc.profileAvatarView.profileImageView.image {
-                    
-                    self.profileAvatarView.profileImageView.image = image
-                    self.profileAvatarView.profileImageView.clipsToBounds = true
-                    profileAvatarView.profileLabel.text = nil
-                    
-                }
+                profileAvatarView.setImage(image: image)
             }
         }
     }
     
-}
-
-extension ConversationsListViewController: PassImageProtocol {
-    func setImage(image: UIImage?) {
-        profileAvatarView.setImage(image: image)
+    
+    @IBAction func settingsButtonPressed(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "ThemesViewController", bundle: nil)
+        
+        let navigationVC = storyboard.instantiateViewController(withIdentifier: "navigationVC") as! UINavigationController
+        
+        let themesViewController = navigationVC.topViewController as! ThemesViewController
+        
+        self.navigationController?.pushViewController(themesViewController, animated: true)
+        themesViewController.title = "Settings"
+        themesViewController.conversationListDelegate = self
+        
+        // MARK: - Closure
+        // Повторил код обновления интерфейса вручную для наглядности
+        themesViewController.closure = { [weak self] in
+            self?.tableView.backgroundColor = ThemeManager.shared.current.backgroundColor
+            
+            self?.navigationController?.navigationBar.tintColor = ThemeManager.shared.current.tintColor
+            self?.navigationController?.navigationBar.barTintColor = ThemeManager.shared.current.backgroundColor
+            
+            self?.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: ThemeManager.shared.current.mainTextColor]
+            self?.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: ThemeManager.shared.current.mainTextColor]
+            self?.tableView.reloadData()
+        }
     }
 }
