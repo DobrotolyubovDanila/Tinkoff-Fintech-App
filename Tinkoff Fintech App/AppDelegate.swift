@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let callBy = #function
         Logger.printApplicationState(from: "Not running", to: "Foreground", callByFunc: callBy)
         
+        ThemeManager.shared.current = DefaultThemeRepository().load()
+        
+        
         return true
     }
     

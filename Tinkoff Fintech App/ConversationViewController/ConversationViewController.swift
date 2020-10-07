@@ -17,6 +17,11 @@ class ConversationViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        
+        tableView.keyboardDismissMode = .interactive
+        tableView.allowsSelection = false
+        
+        tableView.backgroundColor = ThemeManager.shared.current.backgroundColor
     }
 }
 
@@ -37,6 +42,9 @@ extension ConversationViewController:UITableViewDelegate, UITableViewDataSource 
             
             cell.label.text = testArray[indexPath.row].text
             cell.view.layer.cornerRadius = 20
+            cell.view.backgroundColor = ThemeManager.shared.current.incomeMessagesBackgroundColor
+            cell.backgroundColor = ThemeManager.shared.current.backgroundColor
+            cell.label.textColor = ThemeManager.shared.current.incomeMessagesTextColor
             
             return cell
         }
@@ -46,12 +54,17 @@ extension ConversationViewController:UITableViewDelegate, UITableViewDataSource 
             
             cell.label.text = testArray[indexPath.row].text
             cell.view.layer.cornerRadius = 20
+            cell.view.backgroundColor = ThemeManager.shared.current.sendedMessagesBackgroundColor
+            cell.backgroundColor = ThemeManager.shared.current.backgroundColor
+            cell.label.textColor = ThemeManager.shared.current.sendedMessagesTextColor
             
             return cell
         }
         
         return UITableViewCell()
     }
+    
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

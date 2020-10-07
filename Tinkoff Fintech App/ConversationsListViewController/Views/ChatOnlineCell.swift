@@ -9,13 +9,13 @@
 import UIKit
 
 class ChatOnlineCell: UITableViewCell {
-
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var avatarImageView: UIImageView!
-
+    
     @IBOutlet weak var onlineIndicator: UIView!
     
     func configOnlineIndicator() {
@@ -34,6 +34,49 @@ class ChatOnlineCell: UITableViewCell {
         shapeLayer.path = path.cgPath
         
         onlineIndicator.layer.addSublayer(shapeLayer)
+    }
+    
+    func configWithTheme() {
+        nameLabel.textColor = ThemeManager.shared.current.mainTextColor
+        messageLabel.textColor = ThemeManager.shared.current.secondaryTextColor
+        dateLabel.textColor = ThemeManager.shared.current.secondaryTextColor
+        onlineIndicator.backgroundColor = ThemeManager.shared.current.backgroundColor
+        self.backgroundColor = ThemeManager.shared.current.backgroundColor
+    }
+    
+    func configCellContent(_ content: ConversationCellModel) {
+        let dateFormatter = DateFormatter()
+        let isToday = Calendar.current.isDateInToday(content.date)
+        dateFormatter.dateFormat = isToday ? "HH:mm ›" : "dd.MMM ›"
+        
+        let dateString = dateFormatter.string(from: content.date)
+        
+        nameLabel.text = content.name
+        messageLabel.text = content.message ?? "No messages yet"
+        dateLabel.text = dateString
+        avatarImageView.layer.cornerRadius = avatarImageView.frame.height/2
+        
+        if content.hasUnreadMessage {
+            messageLabel.font = UIFont(name: "HelveticaNeue-Medium", size: messageLabel.font.pointSize)
+        } else {
+            messageLabel.font = UIFont(name: "HelveticaNeue", size: messageLabel.font.pointSize)
+        }
+    }
+    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        if highlighted {
+            UIView.animate(withDuration: 0.3) {
+                self.backgroundColor = ThemeManager.shared.current.secondBackgroundColor
+            }
+        } else {
+            UIView.animate(withDuration: 0.3) {
+                self.backgroundColor = ThemeManager.shared.current.backgroundColor
+            }
+        }
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        
     }
     
 }

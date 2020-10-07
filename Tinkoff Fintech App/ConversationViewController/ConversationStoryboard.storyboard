@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="baj-Jf-Xs0">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -14,26 +14,25 @@
             <objects>
                 <viewController storyboardIdentifier="conversationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="i9M-LQ-O8p" customClass="ConversationViewController" customModule="Tinkoff_Fintech_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fHn-uz-XO4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NpP-1Y-VEh">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="receivedMessageCell" rowHeight="70" id="zeh-Dy-0hm" customClass="ConversationCell" customModule="Tinkoff_Fintech_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zeh-Dy-0hm" id="Dnh-05-c2W">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUj-Pz-81j">
-                                                    <rect key="frame" x="16" y="11" width="270" height="48"/>
-                                                    <color key="backgroundColor" red="1" green="0.99414769585524598" blue="0.59500009864283743" alpha="0.69677434815950934" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <rect key="frame" x="20" y="11" width="298" height="48"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifB-L4-pY8">
-                                                    <rect key="frame" x="22" y="21" width="248" height="28"/>
+                                                    <rect key="frame" x="30" y="21" width="274" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -45,7 +44,7 @@
                                                 <constraint firstItem="LUj-Pz-81j" firstAttribute="width" secondItem="Dnh-05-c2W" secondAttribute="width" multiplier="0.72" id="X4u-la-Xhs"/>
                                                 <constraint firstItem="LUj-Pz-81j" firstAttribute="bottom" secondItem="Dnh-05-c2W" secondAttribute="bottomMargin" id="ZTr-N0-czg"/>
                                                 <constraint firstItem="LUj-Pz-81j" firstAttribute="leading" secondItem="Dnh-05-c2W" secondAttribute="leadingMargin" id="aNt-wh-Twr"/>
-                                                <constraint firstItem="ifB-L4-pY8" firstAttribute="leading" secondItem="Dnh-05-c2W" secondAttribute="leadingMargin" constant="6" id="gL9-Lg-3zz"/>
+                                                <constraint firstItem="ifB-L4-pY8" firstAttribute="leading" secondItem="Dnh-05-c2W" secondAttribute="leadingMargin" constant="10" id="gL9-Lg-3zz"/>
                                                 <constraint firstItem="LUj-Pz-81j" firstAttribute="top" secondItem="Dnh-05-c2W" secondAttribute="topMargin" id="jS1-8o-c7U"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ifB-L4-pY8" secondAttribute="bottom" constant="10" id="m2c-XA-KpA"/>
                                             </constraints>
@@ -56,18 +55,17 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sendMessegesCell" rowHeight="70" id="4Yh-Zd-XdI" customClass="ConversationCell" customModule="Tinkoff_Fintech_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="98" width="375" height="70"/>
+                                        <rect key="frame" x="0.0" y="98" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Yh-Zd-XdI" id="ZBJ-tJ-kwt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vCu-Jh-ehH">
-                                                    <rect key="frame" x="89" y="11" width="270" height="48"/>
-                                                    <color key="backgroundColor" red="1" green="0.99414769589999996" blue="0.59500009860000003" alpha="0.69677434819999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <rect key="frame" x="96" y="11" width="298" height="48"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhE-AQ-EtG">
-                                                    <rect key="frame" x="104" y="21" width="249" height="28"/>
+                                                    <rect key="frame" x="113" y="21" width="275" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -93,12 +91,11 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uAS-qf-M2c"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NpP-1Y-VEh" firstAttribute="leading" secondItem="uAS-qf-M2c" secondAttribute="leading" id="BSP-cZ-8VY"/>
-                            <constraint firstItem="uAS-qf-M2c" firstAttribute="bottom" secondItem="NpP-1Y-VEh" secondAttribute="bottom" id="GJa-Wz-eqM"/>
                             <constraint firstItem="NpP-1Y-VEh" firstAttribute="top" secondItem="uAS-qf-M2c" secondAttribute="top" id="fE6-L8-c1e"/>
                             <constraint firstItem="NpP-1Y-VEh" firstAttribute="trailing" secondItem="uAS-qf-M2c" secondAttribute="trailing" id="kOe-xB-z5u"/>
+                            <constraint firstItem="NpP-1Y-VEh" firstAttribute="bottom" secondItem="fHn-uz-XO4" secondAttribute="bottom" id="nYp-TD-BQQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="title" largeTitleDisplayMode="never" id="DbV-4g-qAA"/>
@@ -108,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ngb-3j-gN1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1328.8" y="58.920539730134934"/>
+            <point key="canvasLocation" x="1327.536231884058" y="58.258928571428569"/>
         </scene>
         <!--title-->
         <scene sceneID="94J-wc-Esn">
@@ -116,7 +113,7 @@
                 <navigationController storyboardIdentifier="conversationNC" title="title" automaticallyAdjustsScrollViewInsets="NO" id="baj-Jf-Xs0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="emm-AL-aWa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
