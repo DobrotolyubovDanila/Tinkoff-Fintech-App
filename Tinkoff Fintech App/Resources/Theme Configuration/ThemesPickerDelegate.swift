@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ThemesPickerDelegate {
+protocol ThemesPickerDelegate: AnyObject {
     func updateInterfaceWithTheme()
 }
 

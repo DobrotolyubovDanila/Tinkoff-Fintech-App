@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ThemeProtocol {
+protocol ThemeProtocol: AnyObject {
     var style: InterfaceStyle { get }
     var backgroundColor: UIColor { get }
     var secondBackgroundColor: UIColor { get }
